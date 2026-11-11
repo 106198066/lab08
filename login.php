@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-</head>
-<body>
+<?php include 'header.inc'; ?>
 
-<h1>Login</h1>
+<?php
+if (isset($_GET['error'])) {
+    echo "<p>Invalid username or password.</p>";
+}
+?>
 
 <form method="post" action="process.php">
 
@@ -18,11 +16,10 @@
     <input type="password" id="password" name="password" required>
     <br>
 
-    <input type="hidden" name="token" value="J106198066">
+    <input type="hidden" name="token" value="A12345678">
 
     <input type="submit" value="Login">
 
 </form>
 
-</body>
-</html>
+<?php include 'footer.inc'; ?>
